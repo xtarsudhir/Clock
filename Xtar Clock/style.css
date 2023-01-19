@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #dde1e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Clock{
+    width: 300px;
+    height: 300px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgb(94 104 121 / 29%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Clock::after{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: #dde1e7;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: -1px -1px 5px #ffffff73, 1px 1px 3px rgb(94 104 121 / 29%);
+}
+
+.Clock::before{
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    background: #dde1e7;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgb(94 104 121 / 29%);
+}
+
+.centerPoint1{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    z-index: 1;
+}
+
+.centerPoint2{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #006eff;
+    position: absolute;
+    z-index: 2;
+}
+
+.dot {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot div{
+    width: 10px;
+    height: 4px;
+    background: #444;
+    position: absolute;
+    z-index: 100;
+}
+
+.dot div:nth-child(1){
+    transform: rotate(30deg) translateX(-121px);
+}
+.dot div:nth-child(2){
+    transform: rotate(60deg) translateX(-121px);
+}
+.dot div:nth-child(3){
+    background: #006eff;
+    transform: rotate(90deg) translateX(-121px);
+}
+.dot div:nth-child(4){
+    transform: rotate(120deg) translateX(-121px);
+}
+.dot div:nth-child(5){
+    transform: rotate(150deg) translateX(-121px);
+}
+.dot div:nth-child(6){
+    background: #006eff;
+    transform: rotate(180deg) translateX(-121px);
+}
+.dot div:nth-child(7){
+    transform: rotate(210deg) translateX(-121px);
+}
+.dot div:nth-child(8){
+    transform: rotate(240deg) translateX(-121px);
+}
+.dot div:nth-child(9){
+    background: #006eff;
+    transform: rotate(270deg) translateX(-121px);
+}
+.dot div:nth-child(10){
+    transform: rotate(300deg) translateX(-121px);
+}
+.dot div:nth-child(11){
+    transform: rotate(330deg) translateX(-121px);
+}
+.dot div:nth-child(12){
+    background: #006eff;
+    transform: rotate(360deg) translateX(-121px);
+}
+
+.sec, .hour, .min{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sec::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 135px;
+    background: #006eff;
+    z-index: 100;
+    top: 25px;
+    transform: translateY(-100%);
+}
+
+.sec::after{
+    content: '';
+    position: absolute;
+    top: -30px;
+    border-radius: 20px;
+    width: 10px;
+    height: 50px;
+    background: #006eff;
+    z-index: 100;
+    transform: translateY(100%);
+}
+
+.hour::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-bottom: 55px solid #444;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    top: -29px;
+    transform: translateY(-100%);
+}
+
+.hour::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-top: 31px solid #444;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    top: -30px;
+}
+
+.min::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-bottom: 65px solid red;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    top: -39px;
+    transform: translateY(-100%);
+}
+
+.min::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-top: 41px solid red;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    top: -40px;
+}
